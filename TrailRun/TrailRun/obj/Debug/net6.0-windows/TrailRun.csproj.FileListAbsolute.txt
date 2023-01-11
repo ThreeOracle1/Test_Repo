@@ -15,3 +15,10 @@ C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\
 C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\obj\Debug\net6.0-windows\TrailRun.pdb
 C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\obj\Debug\net6.0-windows\TrailRun.genruntimeconfig.cache
 C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\obj\Debug\net6.0-windows\ref\TrailRun.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Samuel.Parker\OneDrive - Spirit Healthcare\Desktop\Apprenticeship\repo\TrailRun\TrailRun\obj\Debug\net6.0-windows\TrailRun.csproj.CopyComplete
