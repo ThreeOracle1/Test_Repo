@@ -93,5 +93,91 @@ namespace TrailRun
             }
 
         }
+
+        public void displayData()
+        {
+            SqlConnection con = new SqlConnection(conString);
+
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+
+                cmd.CommandText = "Select * From People";
+
+                cmd.ExecuteNonQuery();
+
+                DataTable dt = new DataTable();
+
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+                sda.Fill(dt);
+
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        public void btnInsert_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into People values('"+txtDbName.Text.ToString()+"','"+txtDbAge.Text+"','"+txtDbJob.Text.ToString()+"') ";
+
+                cmd.ExecuteNonQuery();
+
+                displayData();
+
+                MessageBox.Show("insert made successfully");
+            }
+            con.Close();
+        }
+
+        public void btnDelete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Delete From People where Name='"+ txtDbName.Text.ToString() + "'";
+
+                cmd.ExecuteNonQuery();
+
+                displayData();
+
+                MessageBox.Show("Delete made successfully");
+            }
+            con.Close();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Update People set Name= '" + txtAltName.Text.ToString() + "' where Name= '" +txtDbName.Text.ToString()+ "'";
+
+                cmd.ExecuteNonQuery();
+
+                displayData();
+
+                MessageBox.Show("Update made successfully");
+            }
+            con.Close();
+        }
     }
+    
 }

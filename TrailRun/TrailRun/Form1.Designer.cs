@@ -38,16 +38,18 @@ namespace TrailRun
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtDbAge = new System.Windows.Forms.TextBox();
+            this.txtDbJob = new System.Windows.Forms.TextBox();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDisplay = new System.Windows.Forms.Button();
+            this.txtAltName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,12 +125,12 @@ namespace TrailRun
             this.label3.TabIndex = 7;
             this.label3.Text = "Name";
             // 
-            // textBox1
+            // txtDbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 8;
+            this.txtDbName.Location = new System.Drawing.Point(166, 221);
+            this.txtDbName.Name = "txtDbName";
+            this.txtDbName.Size = new System.Drawing.Size(125, 27);
+            this.txtDbName.TabIndex = 8;
             // 
             // label2
             // 
@@ -157,72 +159,93 @@ namespace TrailRun
             this.label5.TabIndex = 11;
             this.label5.Text = "Database Job";
             // 
-            // textBox2
+            // txtDbAge
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 263);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 12;
+            this.txtDbAge.Location = new System.Drawing.Point(166, 263);
+            this.txtDbAge.Name = "txtDbAge";
+            this.txtDbAge.Size = new System.Drawing.Size(125, 27);
+            this.txtDbAge.TabIndex = 12;
             // 
-            // textBox3
+            // txtDbJob
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 306);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 13;
+            this.txtDbJob.Location = new System.Drawing.Point(166, 306);
+            this.txtDbJob.Name = "txtDbJob";
+            this.txtDbJob.Size = new System.Drawing.Size(125, 27);
+            this.txtDbJob.TabIndex = 13;
             // 
-            // button1
+            // btnInsert
             // 
-            this.button1.Location = new System.Drawing.Point(21, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInsert.Location = new System.Drawing.Point(21, 366);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(94, 29);
+            this.btnInsert.TabIndex = 14;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(133, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(121, 366);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 29);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnUpdate
             // 
-            this.button3.Location = new System.Drawing.Point(233, 366);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(221, 366);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(94, 29);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button4
+            // btnDisplay
             // 
-            this.button4.Location = new System.Drawing.Point(333, 366);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Display";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDisplay.Location = new System.Drawing.Point(321, 366);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(94, 29);
+            this.btnDisplay.TabIndex = 17;
+            this.btnDisplay.Text = "Display";
+            this.btnDisplay.UseVisualStyleBackColor = true;
+            // 
+            // txtAltName
+            // 
+            this.txtAltName.Location = new System.Drawing.Point(30, 451);
+            this.txtAltName.Name = "txtAltName";
+            this.txtAltName.Size = new System.Drawing.Size(125, 27);
+            this.txtAltName.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 428);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(180, 20);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "(Replacement name here)";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 574);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtAltName);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnDisplay);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.txtDbJob);
+            this.Controls.Add(this.txtDbAge);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDbName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAge);
@@ -249,15 +272,17 @@ namespace TrailRun
         private TextBox txtAge;
         private Label label1;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtDbName;
         private Label label2;
         private Label label4;
         private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private TextBox txtDbAge;
+        private TextBox txtDbJob;
+        private Button btnInsert;
+        private Button btnDelete;
+        private Button btnUpdate;
+        private Button btnDisplay;
+        private TextBox txtAltName;
+        private Label label6;
     }
 }
